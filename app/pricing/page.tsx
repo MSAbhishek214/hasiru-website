@@ -145,7 +145,7 @@ export default function Pricing() {
             transition={{ delay: 0.2 }}
             className="text-xl mb-8 text-cream-100"
           >
-            Get in touch with us and we'll help you choose the perfect plan
+            Get in touch with us and we&apos;ll help you choose the perfect plan
           </motion.p>
           <motion.a
             href="/contact"

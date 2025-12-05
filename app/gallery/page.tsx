@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 type Category = 'all' | 'balcony' | 'indoor' | 'rescue';
 
@@ -54,7 +55,7 @@ export default function Gallery() {
             transition={{ delay: 0.2 }}
             className="text-xl text-cream-100 max-w-3xl mx-auto"
           >
-            See the beautiful transformations we've created for our clients
+            See the beautiful transformations we&apos;ve created for our clients
           </motion.p>
         </div>
       </section>
@@ -97,13 +98,14 @@ export default function Gallery() {
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow"
               >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
+                <div className="aspect-[4/3] overflow-hidden relative">
+                  <Image
                     src={`https://source.unsplash.com/800x600/?plants,${
                       item.category === 'rescue' ? 'before-after' : item.category
                     }`}
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">

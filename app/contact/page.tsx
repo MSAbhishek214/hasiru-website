@@ -45,7 +45,7 @@ export default function Contact() {
             transition={{ delay: 0.2 }}
             className="text-xl text-cream-100 max-w-3xl mx-auto"
           >
-            Ready to transform your space? Let's chat about your plant care needs.
+            Ready to transform your space? Let&apos;s chat about your plant care needs.
           </motion.p>
         </div>
       </section>
@@ -66,7 +66,7 @@ export default function Contact() {
               Chat with Us on WhatsApp
             </h2>
             <p className="text-sage-600 mb-6 text-lg">
-              Get instant responses and quick quotes. We're here to help!
+              Get instant responses and quick quotes. We&apos;re here to help!
             </p>
             <motion.a
               href="https://wa.me"

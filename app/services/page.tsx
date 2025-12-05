@@ -12,6 +12,7 @@ import {
   Heart,
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Services() {
   const services = [
@@ -159,10 +160,11 @@ export default function Services() {
                 </div>
                 <div className="flex-1">
                   <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
-                    <img
+                    <Image
                       src={`https://source.unsplash.com/800x600/?plants,${service.title.toLowerCase()}`}
                       alt={service.title}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                 </div>
