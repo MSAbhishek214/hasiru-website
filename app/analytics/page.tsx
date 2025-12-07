@@ -2,10 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, Users, MousePointerClick, MessageCircle, Eye } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function Analytics() {
-  // Mediocre metrics data
-  const metrics = {
+  // Initial mediocre metrics data
+  const initialMetrics = {
     websiteTraffic: {
       total: 1247,
       change: -2.3,
@@ -32,6 +33,47 @@ export default function Analytics() {
       pagesPerSession: 2.1,
     },
   };
+
+  const [metrics, setMetrics] = useState(initialMetrics);
+
+  // Update metrics every 5 minutes by 0.05%
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setMetrics((prevMetrics) => {
+        const multiplier = 1.0005; // 0.05% increase
+        
+        return {
+          websiteTraffic: {
+            total: Math.round(prevMetrics.websiteTraffic.total * multiplier),
+            change: prevMetrics.websiteTraffic.change,
+            monthly: Math.round(prevMetrics.websiteTraffic.monthly * multiplier),
+            weekly: Math.round(prevMetrics.websiteTraffic.weekly * multiplier),
+            daily: Math.round(prevMetrics.websiteTraffic.daily * multiplier),
+          },
+          clickthroughRate: {
+            rate: parseFloat((prevMetrics.clickthroughRate.rate * multiplier).toFixed(2)),
+            change: prevMetrics.clickthroughRate.change,
+            clicks: Math.round(prevMetrics.clickthroughRate.clicks * multiplier),
+            impressions: Math.round(prevMetrics.clickthroughRate.impressions * multiplier),
+          },
+          reachOuts: {
+            total: Math.round(prevMetrics.reachOuts.total * multiplier),
+            change: prevMetrics.reachOuts.change,
+            whatsapp: Math.round(prevMetrics.reachOuts.whatsapp * multiplier),
+            contactForm: Math.round(prevMetrics.reachOuts.contactForm * multiplier),
+            conversionRate: parseFloat((prevMetrics.reachOuts.conversionRate * multiplier).toFixed(2)),
+          },
+          engagement: {
+            avgSessionDuration: prevMetrics.engagement.avgSessionDuration, // Keep as string
+            bounceRate: parseFloat((prevMetrics.engagement.bounceRate * multiplier).toFixed(2)),
+            pagesPerSession: parseFloat((prevMetrics.engagement.pagesPerSession * multiplier).toFixed(2)),
+          },
+        };
+      });
+    }, 5 * 60 * 1000); // 5 minutes in milliseconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   const recentActivity = [
     { time: '2 hours ago', action: 'Contact form submission', source: 'Homepage' },
