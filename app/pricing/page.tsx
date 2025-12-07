@@ -7,7 +7,7 @@ export default function Pricing() {
   const plans = [
     {
       name: 'Only Consultation',
-      price: '₹499',
+      price: '₹399',
       description: 'One-time consultation service',
       features: [
         'Expert space assessment',
