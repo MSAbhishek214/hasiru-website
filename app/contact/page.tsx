@@ -106,7 +106,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-forest-600 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 bg-white border border-sage-300 rounded-lg focus:ring-2 focus:ring-forest-600 focus:border-transparent outline-none"
                     placeholder="Your name"
                   />
                 </div>
@@ -121,7 +121,7 @@ export default function Contact() {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-forest-600 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 bg-white border border-sage-300 rounded-lg focus:ring-2 focus:ring-forest-600 focus:border-transparent outline-none"
                     placeholder="+91 99167 08854"
                   />
                 </div>
@@ -136,7 +136,7 @@ export default function Contact() {
                     required
                     value={formData.society}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-forest-600 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 bg-white border border-sage-300 rounded-lg focus:ring-2 focus:ring-forest-600 focus:border-transparent outline-none"
                     placeholder="Your area or apartment society"
                   />
                 </div>
@@ -150,7 +150,7 @@ export default function Contact() {
                     required
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-forest-600 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 bg-white border border-sage-300 rounded-lg focus:ring-2 focus:ring-forest-600 focus:border-transparent outline-none"
                   >
                     <option value="">Select a service</option>
                     <option value="consultation">Consultation</option>
