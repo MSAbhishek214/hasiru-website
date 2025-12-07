@@ -17,19 +17,23 @@ export default function Gallery() {
   ];
 
   // Gallery items with categories and image URLs
+  // For rescue items, we'll show before/after side by side
   const galleryItems = [
     { id: 1, category: 'balcony', title: 'Modern Balcony Garden', image: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
     { id: 2, category: 'indoor', title: 'Living Room Corner', image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
-    { id: 3, category: 'rescue', title: 'Before & After Rescue', image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 3, category: 'rescue', title: 'Before & After Rescue', image: 'https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', beforeImage: 'https://images.unsplash.com/photo-1508610048659-a06c669853d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', afterImage: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' },
     { id: 4, category: 'balcony', title: 'Tropical Balcony Setup', image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
     { id: 5, category: 'indoor', title: 'Kitchen Herb Garden', image: 'https://images.unsplash.com/photo-1464822759844-d150ad3bfb1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
-    { id: 6, category: 'rescue', title: 'Revived Monstera', image: 'https://images.unsplash.com/photo-1508610048659-a06c669853d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 6, category: 'rescue', title: 'Revived Monstera', image: 'https://images.unsplash.com/photo-1508610048659-a06c669853d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', beforeImage: 'https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', afterImage: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' },
     { id: 7, category: 'balcony', title: 'Vertical Garden Wall', image: 'https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
     { id: 8, category: 'indoor', title: 'Bedroom Plant Corner', image: 'https://images.unsplash.com/photo-1509423350716-97f9360b4e09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
-    { id: 9, category: 'rescue', title: 'Saved Fiddle Leaf Fig', image: 'https://images.unsplash.com/photo-1519336056116-9e4d75123443?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 9, category: 'rescue', title: 'Saved Fiddle Leaf Fig', image: 'https://images.unsplash.com/photo-1519336056116-9e4d75123443?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', beforeImage: 'https://images.unsplash.com/photo-1508610048659-a06c669853d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', afterImage: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' },
     { id: 10, category: 'balcony', title: 'Cozy Balcony Oasis', image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
     { id: 11, category: 'indoor', title: 'Office Plant Setup', image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
-    { id: 12, category: 'rescue', title: 'Before & After Transformation', image: 'https://images.unsplash.com/photo-1509423350716-97f9360b4e09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 12, category: 'rescue', title: 'Before & After Transformation', image: 'https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', beforeImage: 'https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', afterImage: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' },
+    { id: 13, category: 'indoor', title: 'Bathroom Plant Nook', image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 14, category: 'balcony', title: 'Urban Balcony Garden', image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 15, category: 'indoor', title: 'Dining Area Plants', image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
   ];
 
   const filteredItems =
@@ -98,14 +102,41 @@ export default function Gallery() {
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow"
               >
-                <div className="aspect-[4/3] overflow-hidden relative">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
+                {item.category === 'rescue' && item.beforeImage && item.afterImage ? (
+                  <div className="aspect-[4/3] overflow-hidden relative grid grid-cols-2 gap-0">
+                    <div className="relative">
+                      <Image
+                        src={item.beforeImage}
+                        alt={`${item.title} - Before`}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute top-2 left-2 bg-red-500/80 text-white px-2 py-1 rounded text-xs font-semibold">
+                        Before
+                      </div>
+                    </div>
+                    <div className="relative">
+                      <Image
+                        src={item.afterImage}
+                        alt={`${item.title} - After`}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute top-2 right-2 bg-green-500/80 text-white px-2 py-1 rounded text-xs font-semibold">
+                        After
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="aspect-[4/3] overflow-hidden relative">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                     <h3 className="font-semibold text-lg">{item.title}</h3>
