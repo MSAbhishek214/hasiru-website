@@ -33,7 +33,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <motion.a
-                href="https://instagram.com"
+                href="https://www.instagram.com/_.hasiru._?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-forest-700 p-3 rounded-lg hover:bg-forest-600 transition-colors"
@@ -44,7 +44,7 @@ export default function Footer() {
                 <Instagram size={20} />
               </motion.a>
               <motion.a
-                href="https://wa.me"
+                href="https://wa.me/919916708854"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-forest-700 p-3 rounded-lg hover:bg-forest-600 transition-colors"

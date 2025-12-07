@@ -161,7 +161,17 @@ export default function Services() {
                 <div className="flex-1">
                   <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
                     <Image
-                      src={`https://source.unsplash.com/800x600/?plants,${service.title.toLowerCase()}`}
+                      src={
+                        service.title === 'Consultation'
+                          ? 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                          : service.title === 'Setup'
+                          ? 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                          : service.title === 'Maintenance'
+                          ? 'https://images.unsplash.com/photo-1464822759844-d150ad3bfb1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                          : service.title === 'Emergency Care'
+                          ? 'https://images.unsplash.com/photo-1508610048659-a06c669853d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                          : 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                      }
                       alt={service.title}
                       fill
                       className="object-cover"

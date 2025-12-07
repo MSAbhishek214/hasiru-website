@@ -11,6 +11,7 @@ interface PricingCardProps {
   features: string[];
   popular?: boolean;
   delay?: number;
+  isContact?: boolean;
 }
 
 export default function PricingCard({
@@ -20,6 +21,7 @@ export default function PricingCard({
   features,
   popular = false,
   delay = 0,
+  isContact = false,
 }: PricingCardProps) {
   return (
     <motion.div
@@ -56,12 +58,12 @@ export default function PricingCard({
       <Link
         href="/contact"
         className={`block w-full text-center py-3 rounded-lg font-semibold transition-colors ${
-          popular
+          popular || isContact
             ? 'bg-forest-600 text-white hover:bg-forest-700'
             : 'bg-sage-100 text-forest-700 hover:bg-sage-200'
         }`}
       >
-        Get Started
+        {isContact ? 'Contact Us' : 'Get Started'}
       </Link>
     </motion.div>
   );

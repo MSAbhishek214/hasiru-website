@@ -84,7 +84,7 @@ export default function Home() {
         className="relative min-h-[90vh] flex items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage:
-            'url(https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&q=80)',
+            'url(https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80)',
         }}
       >
         <div className="absolute inset-0 bg-forest-900/50"></div>

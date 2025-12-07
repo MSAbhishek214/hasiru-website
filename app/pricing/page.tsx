@@ -6,43 +6,44 @@ import PricingCard from '@/components/PricingCard';
 export default function Pricing() {
   const plans = [
     {
-      name: 'Basic Plan',
-      price: '₹2,999',
-      description: 'Perfect for getting started',
+      name: 'Only Consultation',
+      price: '₹499',
+      description: 'One-time consultation service',
       features: [
-        '1 Initial Consultation',
-        '1 Maintenance visit per month',
-        'Basic plant care guidance',
-        'Email support',
+        'Expert space assessment',
+        'Custom plant recommendations',
+        'Design plan & layout suggestions',
+        'Care instructions guide',
       ],
       popular: false,
     },
     {
-      name: 'Standard Plan',
-      price: '₹4,999',
-      description: 'Most popular choice',
+      name: 'Only Maintenance',
+      price: '₹999/month',
+      description: 'Regular plant care service',
       features: [
-        'Initial Consultation',
-        'Complete plant styling & setup',
-        '2 Maintenance visits per month',
-        'Priority support',
-        'Seasonal care adjustments',
+        'Monthly maintenance visits',
+        'Watering & pruning',
+        'Fertilizing & soil care',
+        'Pest & disease prevention',
+        'Health monitoring',
       ],
       popular: true,
     },
     {
-      name: 'Premium Plan',
-      price: '₹7,999',
-      description: 'Complete peace of mind',
+      name: 'Full Package',
+      price: 'Contact Us',
+      description: 'Complete solution',
       features: [
-        'Full balcony/home makeover',
-        '4 Maintenance visits per month',
-        'Emergency care visits included',
-        'Seasonal plant replacements',
-        'Smart gardening consultation',
-        '24/7 priority support',
+        'Consultation included',
+        'Plant sourcing & products',
+        'Professional setup & styling',
+        'Monthly maintenance visits',
+        'Personalized care plan',
+        'Ongoing support',
       ],
       popular: false,
+      isContact: true,
     },
   ];
 
@@ -75,7 +76,7 @@ export default function Pricing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start">
             {plans.map((plan, index) => (
-              <PricingCard key={index} {...plan} delay={index * 0.1} />
+              <PricingCard key={index} {...plan} delay={index * 0.1} isContact={plan.isContact} />
             ))}
           </div>
         </div>

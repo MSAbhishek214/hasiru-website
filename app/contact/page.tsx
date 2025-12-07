@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
+import { MessageCircle, Instagram, Phone, MapPin } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -16,7 +16,7 @@ export default function Contact() {
     e.preventDefault();
     // In a real app, this would submit to a backend or WhatsApp
     const message = `Hello! I'm interested in Hasiru services.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nArea: ${formData.society}\nService: ${formData.service}`;
-    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/919916708854?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -69,7 +69,7 @@ export default function Contact() {
               Get instant responses and quick quotes. We&apos;re here to help!
             </p>
             <motion.a
-              href="https://wa.me"
+              href="https://wa.me/919916708854"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors shadow-lg"
@@ -122,7 +122,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-forest-600 focus:border-transparent outline-none"
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 99167 08854"
                   />
                 </div>
                 <div>
@@ -186,7 +186,7 @@ export default function Contact() {
                     <h3 className="font-semibold text-forest-700 mb-1">WhatsApp</h3>
                     <p className="text-sage-600">Fastest way to reach us</p>
                     <a
-                      href="https://wa.me"
+                      href="https://wa.me/919916708854"
                       className="text-forest-600 hover:text-forest-700 font-medium"
                     >
                       Chat Now →
@@ -200,23 +200,25 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-forest-700 mb-1">Phone</h3>
                     <p className="text-sage-600">Call us during business hours</p>
-                    <a href="tel:+919876543210" className="text-forest-600 hover:text-forest-700 font-medium">
-                      +91 98765 43210
+                    <a href="tel:+919916708854" className="text-forest-600 hover:text-forest-700 font-medium">
+                      +91 99167 08854
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="bg-sage-100 p-3 rounded-lg">
-                    <Mail className="text-forest-600" size={24} />
+                    <Instagram className="text-forest-600" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-forest-700 mb-1">Email</h3>
-                    <p className="text-sage-600">Send us a detailed message</p>
+                    <h3 className="font-semibold text-forest-700 mb-1">Instagram</h3>
+                    <p className="text-sage-600">Follow us for tips and updates</p>
                     <a
-                      href="mailto:hello@hasiru.com"
+                      href="https://www.instagram.com/_.hasiru._?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-forest-600 hover:text-forest-700 font-medium"
                     >
-                      hello@hasiru.com
+                      @_.hasiru._
                     </a>
                   </div>
                 </div>

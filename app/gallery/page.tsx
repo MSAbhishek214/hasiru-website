@@ -16,20 +16,20 @@ export default function Gallery() {
     { id: 'rescue', label: 'Plant Rescue' },
   ];
 
-  // Gallery items with categories
+  // Gallery items with categories and image URLs
   const galleryItems = [
-    { id: 1, category: 'balcony', title: 'Modern Balcony Garden' },
-    { id: 2, category: 'indoor', title: 'Living Room Corner' },
-    { id: 3, category: 'rescue', title: 'Before & After Rescue' },
-    { id: 4, category: 'balcony', title: 'Tropical Balcony Setup' },
-    { id: 5, category: 'indoor', title: 'Kitchen Herb Garden' },
-    { id: 6, category: 'rescue', title: 'Revived Monstera' },
-    { id: 7, category: 'balcony', title: 'Vertical Garden Wall' },
-    { id: 8, category: 'indoor', title: 'Bedroom Plant Corner' },
-    { id: 9, category: 'rescue', title: 'Saved Fiddle Leaf Fig' },
-    { id: 10, category: 'balcony', title: 'Cozy Balcony Oasis' },
-    { id: 11, category: 'indoor', title: 'Office Plant Setup' },
-    { id: 12, category: 'rescue', title: 'Before & After Transformation' },
+    { id: 1, category: 'balcony', title: 'Modern Balcony Garden', image: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 2, category: 'indoor', title: 'Living Room Corner', image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 3, category: 'rescue', title: 'Before & After Rescue', image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 4, category: 'balcony', title: 'Tropical Balcony Setup', image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 5, category: 'indoor', title: 'Kitchen Herb Garden', image: 'https://images.unsplash.com/photo-1464822759844-d150ad3bfb1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 6, category: 'rescue', title: 'Revived Monstera', image: 'https://images.unsplash.com/photo-1508610048659-a06c669853d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 7, category: 'balcony', title: 'Vertical Garden Wall', image: 'https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 8, category: 'indoor', title: 'Bedroom Plant Corner', image: 'https://images.unsplash.com/photo-1509423350716-97f9360b4e09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 9, category: 'rescue', title: 'Saved Fiddle Leaf Fig', image: 'https://images.unsplash.com/photo-1519336056116-9e4d75123443?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 10, category: 'balcony', title: 'Cozy Balcony Oasis', image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 11, category: 'indoor', title: 'Office Plant Setup', image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+    { id: 12, category: 'rescue', title: 'Before & After Transformation', image: 'https://images.unsplash.com/photo-1509423350716-97f9360b4e09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
   ];
 
   const filteredItems =
@@ -100,9 +100,7 @@ export default function Gallery() {
               >
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <Image
-                    src={`https://source.unsplash.com/800x600/?plants,${
-                      item.category === 'rescue' ? 'before-after' : item.category
-                    }`}
+                    src={item.image}
                     alt={item.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
